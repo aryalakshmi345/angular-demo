@@ -1,0 +1,12 @@
+<h4 class="text-center">Employee details!</h4>
+<div class="mt-5 d-flex justify-content-center align-items-center w-100">
+  <input #user (change)="getEmpName($event)" type="text" placeholder="Enter Employee Name" class="form-control w-25">
+  <button class="btn btn-success" (click)="userSubmit(user)">Submit</button>
+</div>
+<div class="mt-5 d-flex flex-column justify-content-center align-items-center w-100">
+   <div class="shadow p-5 w-50"> 
+    <h2>Employee Name: {{empName}}</h2>
+    <img style="height: 200px;" src="{{empURL}}" alt="{{empName}}">
+</div>
+<button class="btn btn-success" (click)="userAdd()">Add</button>
+</div>
