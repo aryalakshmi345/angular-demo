@@ -3,10 +3,18 @@
   <input #user (change)="getEmpName($event)" type="text" placeholder="Enter Employee Name" class="form-control w-25">
   <button class="btn btn-success" (click)="userSubmit(user)">Submit</button>
 </div>
+
+<!-- form -->
+  <form class="w-50" >
+    <input type="text" class="form-control mb-3" placeholder="Designation" name="empdesg" [(ngModel)]="empDesig">
+    <input type="text" class="form-control mb-3" placeholder="Salary" name="empsalary" [(ngModel)]="empSalary">
+    <input type="button" (click)="empSubmit()" class="btn btn-success" value="Submit">
+  </form>
+
 <div class="mt-5 d-flex flex-column justify-content-center align-items-center w-100">
    <div class="shadow p-5 w-50"> 
     <h2>Employee Name: {{empName}}</h2>
-    <img style="height: 200px;" src="{{empURL}}" alt="{{empName}}">
+    <img style="height: 200px;" [src]="empURL" alt="{{empName}}">
+    <button class="btn btn-success" (click)="userAdd()">Add</button>
 </div>
-<button class="btn btn-success" (click)="userAdd()">Add</button>
 </div>
